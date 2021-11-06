@@ -1,0 +1,29 @@
+@mixin font($font-family, $font-file) {
+    @font-face {
+        font-family: $font-family;
+        src: url($font-file+'.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+
+@include font('Allison', '../fonts/allison/Allison-Regular');
+@include font('Poppins-Black', '../fonts/poppins/Poppins-Black');
+@include font('Poppins-BlackItalic', '../fonts/poppins/Poppins-BlackItalic');
+@include font('Poppins-Bold', '../fonts/poppins/Poppins-Bold');
+@include font('Poppins-BoldItalic', '../fonts/poppins/Poppins-BoldItalic');
+@include font('Poppins-ExtraBold', '../fonts/poppins/Poppins-ExtraBold');
+@include font('Poppins-ExtraVoldItalic', '../fonts/poppins/Poppins-ExtraVoldItalic');
+@include font('Poppins-ExtraLight', '../fonts/poppins/Poppins-ExtraLight');
+@include font('Poppins-ExtraLightItalic', '../fonts/poppins/Poppins-ExtraLightItalic');
+@include font('Poppins-Italic', '../fonts/poppins/Poppins-Italic');
+@include font('Poppins-Light', '../fonts/poppins/Poppins-Light');
+@include font('Poppins-LightItalic', '../fonts/poppins/Poppins-LightItalic');
+@include font('Poppins-Medium', '../fonts/poppins/Poppins-Medium');
+@include font('Poppins-MediumItalic', '../fonts/poppins/Poppins-MediumItalic');
+@include font('Poppins-Regular', '../fonts/poppins/Poppins-Regular');
+@include font('Poppins-SemiBold', '../fonts/poppins/Poppins-SemiBold');
+@include font('Poppins-SemiBoldItalic', '../fonts/poppins/Poppins-SemiBoldItalic');
+@include font('Poppins-Thin', '../fonts/poppins/Poppins-Thin');
+@include font('Poppins-ThinItalic', '../fonts/poppins/Poppins-ThinItalic');
