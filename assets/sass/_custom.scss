@@ -1,0 +1,437 @@
+// Navbar
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 15px;
+    background: transparent;
+    z-index: 10;
+
+    @include breakpoint-up(md) {
+        padding-top: 0;
+        top: 2rem;
+        left: 2rem;
+        right: 2rem;
+    }
+
+    .logo img {
+        &.logo-md {
+            height: 32px;
+
+            @include breakpoint-up(md) {
+                height: 45px;
+                display: block;
+            }
+        }
+    }
+
+    .btn-toggler {
+        background: transparent;
+        outline: none;
+        border: none;
+
+        &.active {
+            svg path {
+                transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+        }
+    }
+}
+
+.menu {
+    background-color: rgba(23, 23, 23, .9);
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    right: -100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+
+    &.show {
+        right: 0;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        margin-top: 200px;
+        padding-right: 2rem;
+
+        @include breakpoint-up(md) {
+            padding-right: 4rem;
+        }
+
+        .nav-item {
+            text-align: right;
+        }
+
+        .nav-link {
+            font-family: Poppins-ExtraLight;
+            font-size: 24px;
+            color: $bg-light-default;
+            transition: .3s all;
+
+            &:hover {
+                color: white;
+            }
+
+            @include breakpoint-up(md) {
+                font-size: 36px;
+            }
+        }
+    }
+
+    .menu-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 2.5rem 4rem;
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+
+            &.links li {
+                padding-right: .8rem;
+
+                &:not(:last-child):after {
+                    position: absolute;
+                    content: '';
+                    height: 70%;
+                    top: 50%;
+                    width: 2px;
+                    right: .35rem;
+                    transform: translateY(-50%);
+                    background-color: $text-color-default;
+                }
+
+            }
+
+            li a {
+                color: $text-color-default;
+            }
+
+            &.social-medias li {
+                margin-right: .5rem;
+            }
+        }
+    }
+}
+
+
+// Section
+section {
+    position: relative;
+    padding: 7rem 0 1rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+
+    p,
+    a,
+    label,
+    span {
+        color: $text-color-default;
+    }
+
+    @include breakpoint-up(md) {
+        padding: 7rem 0 2rem;
+    }
+
+    h2 {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        font-size: 48px;
+
+        @include breakpoint-up(md) {
+            font-size: 64px;
+        }
+    }
+
+    &.overlay-top {
+        &:before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            height: 35vh;
+            width: 100%;
+            background: $gradient-transparent-dark;
+        }
+    }
+
+    &.overlay-full {
+        &:after {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: $gradient-overlay;
+        }
+    }
+
+    &.overlay-bottom {
+        &:after {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            height: 35vh;
+            width: 100%;
+            background: $gradient-dark-transparent;
+
+            @include breakpoint-up(md) {}
+        }
+    }
+
+    &.pool {
+        background-image: url('../images/pool.jpg');
+        height: 100vh;
+    }
+
+    &.environtment {
+        background-image: url('../images/environtment.jpg');
+        height: 100%;
+
+        @include breakpoint-up(md) {
+            height: 100vh;
+        }
+    }
+
+    &.mosque {
+        background-image: url('../images/mushola.jpg');
+        height: 100vh
+    }
+
+    &.clubhouse {
+        background-image: url('../images/clubhouse.jpg');
+        height: 100vh;
+    }
+
+    &.type-100 {
+        background-image: url('../images/type_100.jpg');
+        height: 100vh;
+
+        .title-text {
+            font-size: 3.5rem;
+        }
+
+        .btn {
+            border-radius: 0;
+            padding: .75rem 2rem;
+            color: white;
+            transition: .3s all;
+            outline: 2px solid transparent;
+            background: transparent;
+
+            &:hover {
+                outline-color: white;
+                outline-offset: 2px 4px 2px;
+            }
+        }
+    }
+
+    &.type-120 {
+        background-image: url('../images/type_120.jpg');
+        height: 100vh;
+
+        .title-text {
+            font-size: 3.5rem;
+        }
+
+        .btn {
+            border-radius: 0;
+            padding: .75rem 2rem;
+            color: white;
+            transition: .3s all;
+            outline: 2px solid transparent;
+            background: transparent;
+
+            &:hover {
+                outline-color: white;
+                outline-offset: 2px 4px 2px;
+            }
+        }
+
+    }
+
+    &.thumbnail {
+        background-image: url('../images/thumbnail.png');
+        height: 100vh;
+    }
+
+    .title {
+        position: absolute;
+        bottom: 72.5px;
+        color: white;
+        z-index: 5;
+
+        @include breakpoint-up(md) {
+            left: 17%;
+        }
+    }
+
+    .title-text {
+        position: relative;
+        font-size: 2.5rem;
+
+        @include breakpoint-up(md) {
+            font-size: 64px;
+        }
+    }
+
+    .description {
+        width: 100%;
+        color: $text-color-default;
+
+        @include breakpoint-up(md) {
+            max-width: 550px;
+        }
+    }
+
+    .content {
+        position: relative;
+        z-index: 7;
+    }
+
+    .bottom-text {
+        position: absolute;
+        width: 90%;
+        bottom: 72.5px;
+        color: white;
+        z-index: 5;
+
+        @include breakpoint-up(md) {
+            left: 17%;
+            width: 70%;
+        }
+    }
+
+}
+
+// Footer
+footer {
+    background: rgba(28, 31, 36, 1);
+    bottom: 0;
+    width: 100%;
+    padding: 2.5rem;
+
+    p {
+        color: white;
+    }
+}
+
+// Maps
+.maps {
+    height: 300px;
+
+    @include breakpoint-up(md) {
+        height: 500px;
+    }
+}
+
+// Gallery 
+.masonry {
+    column-count: 2;
+    column-gap: 0;
+
+    @media (min-width: 768px) {
+        column-count: 3;
+    }
+
+    @media (min-width: 992px) {
+        column-count: 4;
+    }
+
+    .brick {
+        position: relative;
+        box-sizing: border-box;
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        counter-increment: brick-counter;
+
+        figcaption {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            min-height: 70px;
+            opacity: 0;
+            bottom: 0;
+            background: $gradient-dark-transparent;
+            color: white;
+            z-index: 1;
+            transition: .3s all;
+
+            h5 {
+                transition: .3s all;
+                font-family: Poppins-Bold;
+                text-align: center;
+                margin: 0;
+                transform: translateY(20px);
+            }
+
+            p {
+                transition: .3s all;
+                margin: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center center;
+            transition: .5s all;
+            filter: grayscale(100%);
+        }
+
+        &:hover {
+            figcaption {
+                opacity: 1;
+
+                h5,
+                p {
+                    transform: translateY(0);
+                }
+            }
+
+            img {
+                filter: none;
+            }
+        }
+    }
+
+}
+
+.gallery-container {
+    text-align: center;
+
+    .gallery-item {
+        display: inline-block;
+        width: 40vw;
+        max-width: 300px;
+
+        @include breakpoint-up(md) {
+            width: 20vw;
+        }
+    }
+
+    img {
+        width: 39vw;
+        margin: 0 .5rem .5rem;
+        cursor: zoom-in;
+
+        @include breakpoint-up(md) {
+            width: 98%;
+        }
+    }
+}

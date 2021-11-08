@@ -167,4 +167,20 @@ $(function () {
 
     })
 
+    $('.title-text button').click(function () {
+        $(this).parents('.title').toggleClass('show')
+        $(this).find('svg').css('transform', $(this).parents('.title').hasClass('show') ? 'rotate(180deg)' : 'rotate(0deg)')
+    })
+
+    // $('#open-sketch').click(function () {
+    //     const modal = $(this).data('modal')
+    //     $('body').toggleClass('modal-show')
+    //     $(`#${modal}`).toggleClass('show').fadeIn()
+    // })
+
+    // $('.modal-fullscreen .close').click(function () {
+    //     const modalId = $(this).parents('.modal-fullscreen').attr('id')
+    //     $(`#${modalId}`).toggleClass('show').fadeOut()
+    //     $('body').toggleClass('modal-show')
+    // })
 })
