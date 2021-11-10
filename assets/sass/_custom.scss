@@ -212,6 +212,26 @@ section {
         height: 100vh;
     }
 
+    &.fitness {
+        background-image: url('../images/fitness.jpg');
+        height: 100vh;
+    }
+
+    &.playground {
+        background-image: url('../images/playground.jpg');
+        height: 100vh;
+    }
+
+    &.security {
+        background-image: url('../images/security.jpg');
+        height: 100vh;
+    }
+
+    &.garden {
+        background-image: url('../images/garden.jpg');
+        height: 100vh;
+    }
+
     &.type-100 {
         background-image: url('../images/type_100.jpg');
         height: 100vh;

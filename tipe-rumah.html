@@ -858,7 +858,17 @@
     <script src="./assets/js/app.js"></script>
     <script>
         $(function () {
-            lightGallery(document.querySelector('.gallery-container'), {
+            lightGallery(document.querySelector('#diamonds-sketch'), {
+                pager: false,
+                mobileSettings: {
+                    controls: true,
+                    showCloseIcon: true,
+                    download: true,
+                    rotate: false
+                }
+            });
+
+            lightGallery(document.querySelector('#pearls-sketch'), {
                 pager: false,
                 mobileSettings: {
                     controls: true,
